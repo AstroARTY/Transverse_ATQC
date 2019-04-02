@@ -1,42 +1,47 @@
 import java.io.BufferedReader;
-import  java.io.IOException;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Enums {
-        enum Season {
-            WINTER, SPRING, SUMMER, AUTUMN
-        }
-        public static void main(String args[]) throws IOException {
+    enum Season {
+        WINTER, SPRING, SUMMER, AUTUMN
+    }
+
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
-
+        Season season;
+        season = null;
         System.out.println("What is the month now?");
         String input = br.readLine();
-
-        switch (input.toLowerCase()) {
+        String month = input.toLowerCase();
+        switch (month) {
             case "january":
             case "february":
             case "december":
-                System.out.println(Season.WINTER);
+                season = Season.WINTER;
                 break;
             case "march":
             case "april":
             case "may":
-                System.out.println(Season.SPRING);
+                season = Season.SPRING;
                 break;
             case "june":
             case "july":
             case "august":
-                System.out.println(Season.SUMMER);
+                season = Season.SUMMER;
                 break;
             case "september":
             case "october":
             case "november":
-                System.out.println(Season.AUTUMN);
+                season = Season.AUTUMN;
                 break;
             default:
                 System.out.println("404. Month not Found");
                 break;
+        }
+        if(season != null){
+            System.out.println("Current season is " + season);
         }
     }
 }
