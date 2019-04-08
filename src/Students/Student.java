@@ -49,15 +49,17 @@ public class Student {
         Student s1 = new Student("John", 56);
         Student s2 = new Student("Jane", 42);
         Student s3 = new Student("Platypus", 99);
-        System.out.println("Is " + s1.getName() + " better than " + s2.getName() + "? " + s1.betterStudent(s2));
+        System.out.println(String.format("Is %s better than %s? %b", s1.getName(), s2.getName(), s1.betterStudent(s2)));
         System.out.println(s2.toString());
         System.out.println("_______________________________________________________");
 
         double averageRating = (double) (s1.getRating() + s2.getRating() + s3.getRating()) / 3;
         System.out.println((String.format("Average rating is %1$,.3f", averageRating)));
+
         s2.changeRating();
         System.out.println(String.format("The new %s rating is %d", s2.getName(), s2.getRating()));
         averageRating = (double) (s1.getRating() + s2.getRating() + s3.getRating()) / 3;
+
         System.out.println((String.format("New average rating is %1$,.3f", averageRating)));
     }
 }
