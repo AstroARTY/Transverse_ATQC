@@ -41,8 +41,7 @@ public class Student {
     public void changeRating() {
         int min = 1;
         int max = 100;
-        int x = min + (int) (Math.random() * ((max - min) + 1));
-        setRating(x);
+        setRating(min + (int) (Math.random() * ((max - min) + 1)));
     }
 
     public static void main(String[] args) {
@@ -51,7 +50,7 @@ public class Student {
         Student s3 = new Student("Platypus", 99);
         System.out.println(String.format("Is %s better than %s? %b", s1.getName(), s2.getName(), s1.betterStudent(s2)));
         System.out.println(s2.toString());
-        System.out.println("_______________________________________________________");
+        System.out.println("__________________________________________________");
 
         double averageRating = (double) (s1.getRating() + s2.getRating() + s3.getRating()) / 3;
         System.out.println((String.format("Average rating is %1$,.3f", averageRating)));
