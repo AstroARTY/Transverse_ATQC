@@ -36,4 +36,6 @@ public abstract class Employee implements Payable {
     return "employee ID: " + getEmployeeId() + "Name: " + getName() + "Average Salary: "
            + String.format(format, averageMonthlySalary);
   }
+
+  public abstract void calculatePay();
 }
