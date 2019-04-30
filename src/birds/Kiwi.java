@@ -1,7 +1,8 @@
 package birds;
 
-public class Kiwi extends NonFlyingBird{
-  // TODO fix class declaration
+public class Kiwi extends NonFlyingBird {
 
-  // TODO override toString method by returning a string with the class name
+  public String toString() {
+    return "Kiwi";
+  }
 }

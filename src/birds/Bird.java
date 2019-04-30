@@ -1,7 +1,8 @@
 package birds;
 
-public class Bird {
-  // TODO fix class declaration
+public abstract class Bird {
 
-  // TODO override toString method by returning a string with the class name
+  public String toString() {
+    return "Bird";
+  }
 }
