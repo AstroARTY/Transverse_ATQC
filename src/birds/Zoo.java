@@ -35,7 +35,7 @@ public class Zoo {
    * @param birds   list of birds
    * @param newBird bird to add
    */
-  public static void registerBird(List birds, Bird newBird) {
+  public static void registerBird(List<Bird> birds, Bird newBird) {
     System.out.println("Adding bird to the birds list");
     birds.add(newBird);
     birds.toString();
