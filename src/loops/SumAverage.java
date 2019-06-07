@@ -28,8 +28,8 @@ public class SumAverage {
    */
   public static int sum(int[] numbers) {
     int sum = 0;
-    for (int i = 0; i < numbers.length; i++) {
-      sum += numbers[i];
+    for (int i: numbers) {
+      sum += i;
     }
     return sum;
   }
